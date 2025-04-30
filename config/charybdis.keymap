@@ -83,98 +83,210 @@
 
     keymap {
         compatible = "zmk,keymap";
-        BASE {
-            bindings = <
-// ╭────────────────┬──────────────┬─────────────────────────────┬──────────────────────────────────┬──────────────────────┬────────╮  ╭────────────────┬─────────────────────────┬──────────────────────────────────────┬────────────────────────────────────┬────────────────────────┬──────────────╮
-    &kp F12          &kp Q           &kp W                          &kp E                              &kp R                  &kp T       &kp Y             &kp U                   &kp I                                   &kp O                                &kp P                    &td_layers
-// ├────────────────┼──────────────┼─────────────────────────────┼──────────────────────────────────┼──────────────────────┼────────┤  ├────────────────┼─────────────────────────┼──────────────────────────────────────┼────────────────────────────────────┼────────────────────────┼──────────────┤
-    &hm_left LCMD TAB  &lt 3 A      &hm_left LEFT_ALT S            &hm_left LCTRL D                   &hm_left LEFT_SHIFT F  &kp G       &kp H             &hm_right RIGHT_SHIFT J  &hm_right RCTRL K                       &hm_right RIGHT_ALT L                &hm_right RCMD SEMICOLON &kp DEL
-// ├────────────────┼──────────────┼─────────────────────────────┼──────────────────────────────────┼──────────────────────┼────────┤  ├────────────────┼─────────────────────────┼──────────────────────────────────────┼────────────────────────────────────┼────────────────────────┼──────────────┤
-    &kp C_AC_SEARCH    &kp Z        &hm_left LC(LA(LEFT_SHIFT)) X  &hm_left LA(LC(LG(LEFT_SHIFT))) C  &kp V                  &kp B       &kp N             &kp M                   &hm_right LA(LC(LG(LEFT_SHIFT))) COMMA  &hm_right LC(LA(LEFT_SHIFT)) PERIOD  &td_home                 &clip_hist
-// ╰────────────────┴──────────────┴─────────────────────────────┼──────────────────────────────────┼──────────────────────┼────────┤  ├────────────────┼─────────────────────────┼──────────────────────────────────────┴────────────────────────────────────┴────────────────────────┴──────────────╯
-                                                                               &td_cursor    &mkp LCLK          &td_bs                   &lt 7 RETURN      &td_space
-                                                                          // ╰─────────────┴──────────────────┴────────╯               ╰────────────────┴──────────────╯
-            >;
-        };
 
-        NUM {
-            bindings = <
-&trans   &none  &none  &none  &none          &none        &kp ASTRK  &hm F7 N7  &hm F8 N8  &hm F9 N9  &kp F10        &none
-&trans   &none  &none  &none  &none          &none        &kp MINUS  &hm F4 N4  &hm F5 N5  &hm F6 N6  &hm F11 PLUS   &trans
-&none    &none  &none  &none  &kp BACKSPACE  &kp SPACE    &td_equals &hm F1 N1  &hm F2 N2  &hm F3 N3  &hm F12 SLASH  &none
-                       &none  &none          &trans       &kp DOT    &kp N0
-            >;
-        };
+0 {
+    bindings = <
+        &kp KC_T &kp KC_R &kp KC_E &kp KC_W &kp KC_Q &td_17
+        &kp KC_G &kp KC_F &kp KC_D &kp KC_S &kp KC_A &kp KC_TAB
+        &kp KC_B &kp KC_V &kp KC_C &kp KC_X &kp KC_Z &kp KC_LSHIFT
+        &kp KC_MUTE &td_19 &mt 1 &kp KC_LCTRL &none &none
+        &kp KC_Y &kp KC_U &kp KC_I &kp KC_O &kp KC_P &kp KC_BSPACE
+        &kp KC_H &kp KC_J &kp KC_K &kp KC_L &td_0 &td_18
+        &kp KC_N &kp KC_M &kp KC_COMMA &kp KC_DOT &td_1 &kp KC_RSHIFT
+        &kp KC_HOME &kp KC_ENTER &mt 2 &kp KC_LALT &none &none
+    >;
+};
+1 {
+    bindings = <
+        &kp KC_WH_U &kp KC_BTN1 &kp KC_BTN3 &kp KC_BTN2 &mt LCTRL KC_C &kp KC_ESCAPE
+        &kp KC_WH_D &kp KC_BTN1 &kp KC_MS_D &kp KC_BTN2 &mt LCTRL KC_V &kp LCA(KC_DELETE)
+        &kp KC_NUMLOCK &mt LCTRL KC_KP_PLUS &mt LCTRL KC_KP_MINUS &mt LCTRL KC_A &mt LCTRL KC_X &kp KC_TRNS
+        &kp KC_BTN3 &kp KC_LALT &kp KC_TRNS &kp KC_RCTRL &none &none
+        &td_2 &td_10 &td_11 &td_12 &td_14 &kp KC_BSPACE
+        &td_3 &td_7 &td_8 &td_9 &td_15 &kp KC_PSCREEN
+        &kp KC_BSLASH &td_4 &td_5 &td_6 &td_16 &kp KC_TRNS
+        &kp LSFT(KC_EQUAL) &kp KC_LALT &kp KC_RSHIFT &td_13 &none &none
+    >;
+};
+2 {
+    bindings = <
+        &kp LSFT(KC_6) &mt LALT KC_ENTER &kp KC_APPLICATION &mt LCTRL KC_EQUAL &mt LALT KC_F7 &kp KC_BSPACE
+        &kp KC_MPLY &kp MEH(KC_K) &kp MEH(KC_COMMA) &mt LCTRL KC_MINUS &kp KC_ENTER &kp C_S(KC_A)
+        &kp KC_MNXT &kp KC_MPRV &kp KC_PGUP &kp KC_NO &kp DF(3) &kp KC_NO
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp KC_APPLICATION &kp RALT(KC_ENTER) &mt LCTRL KC_SPACE &kp KC_ENTER &kp KC_P &kp KC_DELETE
+        &kp KC_LEFT &kp KC_DOWN &kp KC_UP &kp KC_RIGHT &kp M14 &kp KC_RGUI
+        &kp M11 &mt LALT KC_LSHIFT &kp C_S(KC_A) &kp MEH(KC_F9) &kp SGUI(KC_C) &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+3 {
+    bindings = <
+        &kp KC_WH_U &kp KC_BTN1 &kp KC_TRNS &kp KC_BTN2 &kp KC_MNXT &kp KC_ESCAPE
+        &kp KC_WH_D &kp KC_6 &kp KC_4 &kp KC_3 &kp KC_2 &kp KC_1
+        &kp KC_4 &kp KC_3 &kp KC_2 &kp KC_1 &kp DF(13) &kp DF(0)
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp KC_ESCAPE &kp KC_Q &kp KC_W &kp KC_E &kp KC_R &kp KC_LALT
+        &kp KC_TAB &kp KC_A &kp KC_S &kp KC_D &kp KC_F &kp KC_G
+        &kp KC_ENTER &kp KC_Z &kp KC_X &kp KC_C &kp KC_V &kp KC_B
+        &kp KC_I &kp KC_LCTRL &kp KC_LSHIFT &kp KC_SPACE &none &none
+    >;
+};
+4 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp LCA(KC_LBRACKET) &kp LSFT(KC_F11) &kp C_S(KC_DOWN) &kp C_S(KC_UP) &kp LCA(KC_RBRACKET) &kp LCA(KC_E)
+        &mt LCTRL KC_SLASH &kp LSA(KC_E) &kp LSA(KC_W) &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp C_S(KC_SLASH) &kp KC_F11 &kp C_S(KC_DOWN) &kp C_S(KC_UP) &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+5 {
+    bindings = <
+        &kp C_S(KC_F4) &mt LALT KC_F4 &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp C_S(KC_F5) &kp LCG(KC_T) &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp SGUI(KC_LEFT) &mt LALT KC_TAB &kp RGUI(KC_TAB) &kp SGUI(KC_RIGHT) &kp M13 &kp M12
+        &kp LGUI(KC_LEFT) &kp LGUI(KC_DOWN) &kp LGUI(KC_UP) &kp LGUI(KC_RIGHT) &kp LGUI(KC_TAB) &kp MEH(KC_V)
+        &kp LCG(KC_LEFT) &kp M3 &kp M4 &kp LCG(KC_RIGHT) &kp KC_TRNS &kp MEH(KC_B)
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+6 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp MEH(KC_DOT) &kp LCA(KC_LBRACKET) &kp LCA(KC_RBRACKET) &none &none
+        &mt LALT KC_0 &mt LALT KC_7 &mt LALT KC_8 &mt LALT KC_9 &mt LALT KC_MINUS &mt LALT KC_F1
+        &kp LCA(KC_RBRACKET) &mt LALT KC_4 &mt LALT KC_5 &mt LALT KC_6 &mt LALT KC_EQUAL &kp LCA(KC_2)
+        &kp MEH(KC_O) &mt LALT KC_1 &mt LALT KC_2 &mt LALT KC_3 &mt LALT KC_BSLASH &mt LALT KC_0
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+7 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp DF(0)
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp MEH(KC_F5) &kp MEH(KC_F1) &kp MEH(KC_F2) &kp MEH(KC_F4) &kp KC_TRNS &kp MEH(KC_F3)
+        &kp MEH(KC_UP) &kp MEH(KC_LEFT) &kp MEH(KC_RIGHT) &kp MEH(KC_DOWN) &kp KC_TRNS &kp KC_TRNS
+        &mt LALT KC_RBRACKET &mt LALT KC_LBRACKET &kp KC_TRNS &kp MEH(KC_R) &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+8 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp KC_TRNS &kp KC_F7 &kp KC_F8 &kp KC_F9 &kp KC_F10 &kp KC_TRNS
+        &kp KC_TRNS &kp KC_F4 &kp KC_F5 &kp KC_F6 &kp KC_F11 &kp KC_TRNS
+        &kp KC_TRNS &kp KC_F1 &kp KC_F2 &kp KC_F3 &kp KC_F12 &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+9 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp KC_F9 &kp KC_F8 &kp KC_F7 &kp RSFT(KC_F8) &kp KC_TRNS &kp KC_TRNS
+        &kp RCTL(KC_F5) &kp C_S(KC_F8) &kp KC_TRNS &kp C_S(KC_F10) &mt LCTRL KC_F8 &kp KC_TRNS
+        &kp C_S(KC_9) &kp C_S(KC_8) &kp C_S(KC_7) &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+10 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp MEH(KC_O) &kp MEH(KC_7) &kp MEH(KC_8) &kp MEH(KC_9) &kp MEH(KC_R) &kp KC_TRNS
+        &kp MEH(KC_LEFT) &kp MEH(KC_4) &kp MEH(KC_5) &kp MEH(KC_6) &kp KC_TRNS &kp KC_TRNS
+        &kp MEH(KC_RIGHT) &kp MEH(KC_1) &kp MEH(KC_2) &kp MEH(KC_3) &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+11 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp M5 &kp M7 &kp M9 &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp M6 &kp M8 &kp M10 &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+12 {
+    bindings = <
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+        &kp KC_TRNS &kp KC_TRNS &kp KC_F4 &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp LSA(KC_LEFT) &kp KC_F7 &kp LSFT(KC_F7) &kp LSA(KC_RIGHT) &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+        &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS &none &none
+    >;
+};
+13 {
+    bindings = <
+        &kp KC_T &kp KC_R &kp KC_E &kp KC_W &kp KC_Q &kp KC_ESCAPE
+        &kp KC_G &kp KC_F &kp KC_D &kp KC_S &kp KC_A &kp KC_TAB
+        &kp KC_B &kp KC_V &kp KC_C &kp KC_X &kp KC_Z &kp KC_LSHIFT
+        &kp KC_NO &kp KC_SPACE &mt 14 &kp KC_LCTRL &none &none
+        &kp KC_Y &kp KC_U &kp KC_I &kp KC_O &kp KC_P &kp DF(0)
+        &kp KC_H &kp KC_BTN1 &kp KC_BTN2 &kp KC_NO &kp KC_WH_U &kp KC_NO
+        &kp KC_N &kp KC_M &kp KC_COMMA &kp KC_DOT &kp KC_WH_D &mt 1
+        &kp KC_NO &kp KC_ENTER &mt 1 &kp KC_RALT &none &none
+    >;
+};
+14 {
+    bindings = <
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &none &none
+        &kp KC_4 &kp KC_7 &kp KC_8 &kp KC_9 &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_4 &kp KC_5 &kp KC_6 &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_1 &kp KC_2 &kp KC_3 &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_0 &none &none
+    >;
+};
+15 {
+    bindings = <
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &none &none
+        &kp KC_NO &mt LALT KC_LEFT &mt LALT KC_RIGHT &kp KC_BTN3 &kp KC_NO &kp KC_NO
+        &kp DF(0) &kp KC_BTN1 &kp KC_BTN2 &kp KC_SCROLLLOCK &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp SGUI(KC_LEFT) &kp SGUI(KC_RIGHT) &kp KC_NUMLOCK &kp KC_NO &kp KC_NO
+        &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &none &none
+    >;
+};
 
-        NAV {
+        /* Extras (Layer 16) */
+        16 {
             bindings = <
-&none   &none   &none   &none   &none   &none     &detach_session  &create_or_attach  &next_pane   &show_sessions  &sync_panes       &none
-&trans  &trans  &trans  &trans  &trans  &none     &h_split         &kp LEFT_ARROW     &kp DOWN     &kp UP          &kp RIGHT_ARROW   &none
-&none   &none   &none   &none   &none   &none     &v_split         &kp HOME           &kp PG_DN    &kp PG_UP       &kp END           &none
-                        &none   &none   &trans    &trans   &trans
-            >;
-        };
-
-        SYM {
-            bindings = <
-&none  &none  &none  &none  &none   &none      &kp ASTRK   &kp AMPS       &kp LEFT_BRACE &kp DLLR &td_grave &kp EXCL
-&none  &none  &none  &none  &trans  &none      &td_hyphen  &kp SEMICOLON  &kp LPAR       &kp LBKT &kp PLUS  &kp PIPE
-&none  &none  &none  &none  &none   &none      &kp AT_SIGN &kp UNDERSCORE &kp LT         &kp HASH &kp PRCNT &kp BSLH
-                   &trans  &trans  &trans      &trans      &trans
-            >;
-        };
-
-        GAME {
-            bindings = <
-&kp N1  &kp TAB    &kp Q  &kp W   &kp E      &kp R           &none  &none  &none  &none  &none  &trans
-&kp N2  &kp LCTRL  &kp A  &kp S   &kp D      &kp F           &none  &none  &none  &none  &none  &none
-&kp N3  &kp LSHFT  &kp Z  &kp X   &kp C      &kp V           &none  &none  &none  &none  &none  &none
-                          &none   &kp SPACE  &kp LEFT_ALT    &none  &none
-            >;
-        };
-
-        PHOTOS {
-            bindings = <
-&trans          &kp LA(LC(LS(Z)))  &kp LA(LC(LS(E)))  &kp LA(LC(LS(A)))  &kp LA(LC(LS(S)))  &kp LA(LC(LS(B)))    &none   &none   &none  &none  &none  &trans
-&kp LC(LA(E))   &kp LEFT           &kp DOWN           &kp UP             &kp RIGHT          &kp LCTRL            &none   &none   &none  &none  &none  &trans
-&kp LS(DELETE)  &kp LA(LS(A))      &kp LA(KP_N1)      &kp LA(KP_N2)      &kp LA(KP_N3)      &none                &none   &none   &none  &none  &none  &none
-                                                      &trans             &trans             &trans               &trans  &trans
-            >;
-        };
-
-        EXTRAS {
-            bindings = <
-&kp C_POWER       &shrug  &lgtm     &gcm      &none  &kp C_BRIGHTNESS_INC    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3  &out OUT_TOG     &bt BT_CLR
-&kp C_SLEEP       &sudo   &none     &none     &none  &kp C_BRIGHTNESS_DEC    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP    &kp C_NEXT       &none
-&kp C_AL_COFFEE   &none   &none     &none     &none  &none                   &new_dir      &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp PRINTSCREEN  &studio_unlock
-                                    &none     &none  &none                   &none         &none
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&none    &msc MOVE_LEFT  &msc MOVE_UP    &mmv MOVE_UP    &msc MOVE_DOWN   &msc MOVE_RIGHT    &none  &none            &none      &none         &none          &none
-&kp TAB  &mkp MB4        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5           &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp LEFT_ALT  &kp LCMD  &none
-&none    &kp C_AC_UNDO   &kp C_AC_CUT    &kp C_AC_COPY   &kp C_AC_PASTE   &mkp MCLK          &none  &none            &none      &none         &none          &none
-                                         &trans          &trans           &trans             &kp RETURN              &trans
-            >;
-        };
-
-        SLOW {
-            bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                              &trans    &trans    &trans    &trans    &trans
-            >;
-        };
-
-        SCROLL {
-            bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                              &trans    &trans    &trans    &trans    &trans
+                &kp C_POWER       &shrug  &lgtm     &gcm      &none  &kp C_BRIGHTNESS_INC
+                &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3  &out OUT_TOG &bt BT_CLR
+                &kp C_SLEEP       &sudo   &none     &none     &none  &kp C_BRIGHTNESS_DEC
+                &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP    &kp C_NEXT       &none
+                &kp C_AL_COFFEE   &none   &none     &none     &none  &none
+                &new_dir      &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp PRINTSCREEN  &studio_unlock
+                &none     &none  &none                   &none         &none
             >;
         };
     };
