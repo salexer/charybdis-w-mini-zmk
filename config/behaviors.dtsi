@@ -10,7 +10,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp KC_SCOLON>, <&kp RSFT(KC_SCOLON)>;
+            bindings = <&kp SEMICOLON>, <&kp RSHIFT>;
         };
         td_1: td_1 {
             compatible = "zmk,behavior-tap-dance";
