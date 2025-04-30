@@ -171,3 +171,5 @@ layers:
 combos:
 - p: [38, 39]
   k: BT
+- p: [19, 20]
+  k: L CLK
