@@ -1,8 +1,9 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
-#define MACRO_PLACEHOLDER 0
-// #include "macros.dtsi"
 
+#define MACRO_PLACEHOLDER 0
+
+// #include "macros.dtsi"
 // #include "behaviors.dtsi"
 // #include "combos.dtsi"
 // #include <behaviors.dtsi>
@@ -19,9 +20,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-
-        // layers = <0 2 7>;
-
+        layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -143,8 +142,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_param_1to1>,
+                <&kp LEFT_CONTROL &macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
@@ -190,6 +188,11 @@
             bindings = <&mo 3>;
             key-positions = <38 39>;
         };
+
+        MOUSE_BUTTON {
+            bindings = <&mkp LCLK>;
+            key-positions = <19 20>;
+        };
     };
 
     keymap {
@@ -226,10 +229,10 @@
 
         BT {
             bindings = <
-&kp C_POWER      &none  &none  &none   &none  &kp C_BRIGHTNESS_INC    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3     &out OUT_TOG     &bt BT_CLR
-&kp C_SLEEP      &none   &none  &none  &none  &kp C_BRIGHTNESS_DEC    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP       &kp C_NEXT       &none
-&kp C_AL_COFFEE  &none   &none  &none  &none  &none                   &none      &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PRINTSCREEN  &studio_unlock
-                                &none  &none  &none                   &none         &none
+&kp C_POWER      &none  &none  &none  &none  &kp C_BRIGHTNESS_INC    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3     &out OUT_TOG     &bt BT_CLR
+&kp C_SLEEP      &none  &none  &none  &none  &kp C_BRIGHTNESS_DEC    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP       &kp C_NEXT       &none
+&kp C_AL_COFFEE  &none  &none  &none  &none  &none                   &none         &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PRINTSCREEN  &studio_unlock
+                               &none  &none  &none                   &none         &none
             >;
         };
     };
