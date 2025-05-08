@@ -189,22 +189,148 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SNIPE:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  IDE_WINDOW:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Alt+ 0
+  - Alt+ 7
+  - Alt+ 8
+  - Alt+ 9
+  - Alt+ -
+  - Alt+ F1
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Alt+ 4
+  - Alt+ 5
+  - Alt+ 6
+  - Alt+ =
+  - Ctl+Alt+ 2
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Meh+ O
+  - Alt+ 1
+  - Alt+ 2
+  - Alt+ 3
+  - Alt+ \
+  - {t: ▽, type: trans}
+  - Ctl+Alt+ ]
+  - Alt+Ctl+ [
+  - Meh+ .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  WINDOWS_LAYER:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Gui+ LEFT
+  - Alt+ TAB
+  - Gui+ TAB
+  - Sft+Gui+ RIGHT
+  - Sft+Ctl+Gui+ LEFT
+  - Sft+Ctl+Gui+ RIGHT
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+ LEFT
+  - Gui+ DOWN
+  - Gui+ UP
+  - Gui+ RIGHT
+  - {t: ▽, type: trans}
+  - Meh+ V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+Gui+ LEFT
+  - Alt+Gui+ LEFT
+  - Alt+Gui+ RIGHT
+  - Ctl+Gui+ RIGHT
+  - Sft+Ctl+Gui+ F
+  - Meh+ B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -216,4 +342,10 @@ combos:
 - p: [19, 20]
   k: L CLK
 - p: [20, 21]
-  k: SCROLL
+  k: {t: SCROLL, h: toggle}
+- p: [15, 14]
+  k: IDE_WINDOW
+- p: [32, 33]
+  k: {t: SNIPE, h: toggle}
+- p: [14, 13]
+  k: WINDOWS_LAYER
