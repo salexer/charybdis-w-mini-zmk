@@ -35,12 +35,12 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <8>;
+        layers = <5>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <6>;
+        scale-divisor = <8>;
     };
 
     /* input config for mouse scroll mode */
@@ -202,10 +202,26 @@
             bindings = <&mkp LCLK>;
             key-positions = <19 20>;
         };
+
         SCROLL_TOGGLE {
-            bindings = <&mo 4>;
+            bindings = <&tog 4>;
             key-positions = <20 21>;
             timeout-ms = <200>;
+        };
+
+        ide_windows {
+            bindings = <&mo 6>;
+            key-positions = <15 14>;
+        };
+
+        snipe_mod {
+            bindings = <&tog 5>;
+            key-positions = <32 33>;
+        };
+
+        windows_layer {
+            bindings = <&mo 7>;
+            key-positions = <14 13>;
         };
     };
 
@@ -252,10 +268,37 @@
 
         SCROLL {
             bindings = <
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-&trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
-                              &trans    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        SNIPE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        IDE_WINDOW {
+            bindings = <
+&trans  &trans  &trans  &trans                     &trans                    &trans                 &kp LA(N0)         &kp LA(N7)        &kp LA(N8)        &kp LA(N9)        &kp LA(MINUS)      &kp LA(F1)
+&trans  &trans  &trans  &trans                     &trans                    &trans                 &trans             &kp LA(NUMBER_4)  &kp LA(N5)        &kp LA(N6)        &kp LA(EQUAL)      &kp LC(LA(N2))
+&trans  &trans  &trans  &trans                     &trans                    &trans                 &kp LA(LS(LC(O)))  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(BACKSLASH)  &trans
+                        &kp LC(LA(RIGHT_BRACKET))  &kp LA(LC(LEFT_BRACKET))  &kp LA(LC(LS(DOT)))    &trans             &trans
+            >;
+        };
+
+        WINDOWS_LAYER {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(LG(LEFT))  &kp LA(TAB)       &kp LG(TAB)        &kp LS(LG(RIGHT))  &kp LS(LC(LG(LEFT)))  &kp LS(LC(LG(RIGHT)))
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LG(LEFT)      &kp LG(DOWN)      &kp LG(UP)         &kp LG(RIGHT)      &trans                &kp LS(LA(LC(V)))
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LC(LG(LEFT))  &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp LC(LG(RIGHT))  &kp LS(LC(LG(F)))     &kp LA(LS(LC(B)))
+                        &trans  &trans  &trans    &trans            &trans
             >;
         };
     };
