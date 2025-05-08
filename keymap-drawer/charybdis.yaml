@@ -189,8 +189,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -216,4 +216,4 @@ combos:
 - p: [19, 20]
   k: L CLK
 - p: [20, 21]
-  k: {t: SCROLL, h: toggle}
+  k: SCROLL
