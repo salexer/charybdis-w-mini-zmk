@@ -48,7 +48,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <5>;
+        layers = <4>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -203,7 +203,7 @@
             key-positions = <19 20>;
         };
         SCROLL_TOGGLE {
-            bindings = <&to 5>;
+            bindings = <&to 4>;
             key-positions = <20 21>;
             timeout-ms = <200>;
         };

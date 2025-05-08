@@ -24,7 +24,7 @@ layers:
   - K
   - L
   - '&as SEMICOLON'
-  - {t: '&ru_en_toggle', h: L CLK}
+  - '&ru_en_td'
   - LSHFT
   - Z
   - X
@@ -35,7 +35,7 @@ layers:
   - M
   - '&as COMMA'
   - '&as DOT'
-  - '&as DOUBLE_QUOTES'
+  - '&as SINGLE_QUOTE'
   - RSHFT
   - LEFT CONTROL
   - NUMBER_MOUSE
@@ -168,8 +168,52 @@ layers:
   - {type: held}
   - {type: held}
   - ''
+  SCROLL:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [38, 39]
   k: BT
 - p: [19, 20]
   k: L CLK
+- p: [20, 21]
+  k: {t: SCROLL, h: toggle}
