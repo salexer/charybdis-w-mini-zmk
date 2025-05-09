@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - ESC
+  - {t: ESCAPE, h: '`'}
   - Q
   - W
   - E
@@ -85,11 +85,11 @@ layers:
   - {t: ▽, type: trans}
   - '&as N0'
   ARROWS_MEDIA:
+  - MUTE
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+ =
+  - MENU
+  - Alt+ ENTER
   - {t: ▽, type: trans}
   - MENU
   - {t: ▽, type: trans}
@@ -97,24 +97,24 @@ layers:
   - ENTER
   - {t: ▽, type: trans}
   - DEL
+  - VOLUME UP
+  - {t: ▽, type: trans}
+  - Ctl+ -
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - PLAY PAUSE
   - LEFT
   - DOWN ARROW
   - UP
   - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - VOL DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - PREV
+  - NEXT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -267,9 +267,9 @@ layers:
   - Alt+ F1
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Alt+ 4
@@ -299,8 +299,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Alt+ F4
+  - Sft+Ctl+ F4
   - Sft+Gui+ LEFT
   - Alt+ TAB
   - Gui+ TAB
@@ -308,11 +308,11 @@ layers:
   - Sft+Ctl+Gui+ LEFT
   - Sft+Ctl+Gui+ RIGHT
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+Ctl+ T
+  - Sft+Ctl+ F5
   - Gui+ LEFT
   - Gui+ DOWN
   - Gui+ UP
@@ -336,6 +336,48 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  IDE_TAB_MANAGER:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [38, 39]
   k: BT
@@ -343,9 +385,9 @@ combos:
   k: L CLK
 - p: [20, 21]
   k: {t: SCROLL, h: toggle}
-- p: [15, 14]
+- p: [15, 16]
   k: IDE_WINDOW
 - p: [32, 33]
   k: {t: SNIPE, h: toggle}
-- p: [14, 13]
+- p: [14, 15]
   k: WINDOWS_LAYER
