@@ -223,6 +223,11 @@
             bindings = <&mo 7>;
             key-positions = <14 15>;
         };
+
+        shift_number {
+            bindings = <&mo 9>;
+            key-positions = <16 37>;
+        };
     };
 
     keymap {
@@ -241,7 +246,7 @@
             bindings = <
 &trans  &ctrl_plus C  &trans        &trans            &mkp RCLK        &msc SCRL_UP      &as LEFT_BRACKET   &as N7  &as N8  &as N9        &as MINUS  &kp BACKSPACE
 &trans  &ctrl_plus V  &trans        &trans            &trans           &msc SCRL_DOWN    &as RIGHT_BRACKET  &as N4  &as N5  &as NUMBER_6  &as EQUAL  &kp PRINTSCREEN
-&trans  &ctrl_plus X  &ctrl_plus A  &ctrl_plus MINUS  &ctrl_plus PLUS  &trans            &kp PIPE           &as N1  &as N2  &as N3        &as SLASH  &trans
+&trans  &ctrl_plus X  &ctrl_plus A  &ctrl_plus MINUS  &ctrl_plus PLUS  &trans            &kp BACKSLASH      &as N1  &as N2  &as N3        &as SLASH  &trans
                                     &trans            &trans           &trans            &trans             &as N0
             >;
         };
@@ -308,6 +313,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        shift_number {
+            bindings = <
+&trans  &ctrl_plus C  &trans        &trans            &mkp RCLK        &msc SCRL_UP      &kp LS(LEFT_BRACKET)   &kp LS(N7)  &kp LS(N8)  &kp LS(N9)        &kp LS(MINUS)  &kp BACKSPACE
+&trans  &ctrl_plus V  &trans        &trans            &trans           &msc SCRL_DOWN    &kp LS(RIGHT_BRACKET)  &kp LS(N4)  &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(EQUAL)  &kp PRINTSCREEN
+&trans  &ctrl_plus X  &ctrl_plus A  &ctrl_plus MINUS  &ctrl_plus PLUS  &trans            &kp LS(BACKSLASH)      &kp LS(N1)  &kp LS(N2)  &kp LS(N3)        &kp LS(SLASH)  &trans
+                                    &trans            &trans           &trans            &trans                 &as N0
             >;
         };
     };

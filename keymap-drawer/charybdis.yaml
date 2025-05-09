@@ -73,7 +73,7 @@ layers:
   - '&ctrl_plus MINUS'
   - '&ctrl_plus PLUS'
   - {t: ▽, type: trans}
-  - '|'
+  - \
   - '&as N1'
   - '&as N2'
   - '&as N3'
@@ -378,6 +378,48 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  shift_number:
+  - {t: ▽, type: trans}
+  - '&ctrl_plus C'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - R CLK
+  - '&msc SCRL_UP'
+  - Sft+ [
+  - Sft+ 7
+  - Sft+ 8
+  - Sft+ 9
+  - Sft+ -
+  - BACK SPACE
+  - {t: ▽, type: trans}
+  - '&ctrl_plus V'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - '&msc SCRL_DOWN'
+  - Sft+ ]
+  - Sft+ 4
+  - Sft+ 5
+  - Sft+ 6
+  - Sft+ =
+  - PRINT SCREEN
+  - {t: ▽, type: trans}
+  - '&ctrl_plus X'
+  - '&ctrl_plus A'
+  - '&ctrl_plus MINUS'
+  - '&ctrl_plus PLUS'
+  - {t: ▽, type: trans}
+  - Sft+ \
+  - Sft+ 1
+  - Sft+ 2
+  - Sft+ 3
+  - Sft+ /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&as N0'
 combos:
 - p: [38, 39]
   k: BT
@@ -391,3 +433,5 @@ combos:
   k: {t: SNIPE, h: toggle}
 - p: [14, 15]
   k: WINDOWS_LAYER
+- p: [16, 37]
+  k: shift_number
