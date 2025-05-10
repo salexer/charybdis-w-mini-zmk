@@ -59,7 +59,7 @@ layers:
   - '&ctrl_plus V'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - shift_number
   - '&msc SCRL_DOWN'
   - '&as RIGHT_BRACKET'
   - '&as N4'
@@ -313,11 +313,11 @@ layers:
   - {type: held}
   - Gui+Ctl+ T
   - Sft+Ctl+ F5
-  - Gui+ LEFT
-  - Gui+ DOWN
-  - Gui+ UP
-  - Gui+ RIGHT
-  - {t: ▽, type: trans}
+  - '&win_plus LG(LEFT)'
+  - '&win_plus LG(DOWN)'
+  - '&win_plus LG(UP)'
+  - '&win_plus LG(RIGHT)'
+  - Sft+Gui+ Q
   - Meh+ V
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
