@@ -55,7 +55,7 @@ layers:
   - '&as N9'
   - '&as MINUS'
   - BACK SPACE
-  - {t: ▽, type: trans}
+  - Alt+Ctl+ DELETE
   - '&ctrl_plus V'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -419,7 +419,49 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&as N0'
+  - Sft+ 0
+  DEBUG:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F9
+  - F8
+  - F7
+  - Sft+ F8
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctl+ F5
+  - Sft+Ctl+ F8
+  - {t: ▽, type: trans}
+  - Ctl+Sft+ F10
+  - Ctl+ F8
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Ctl+ 9
+  - Sft+Ctl+ 8
+  - Sft+Ctl+ 7
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [38, 39]
   k: BT
