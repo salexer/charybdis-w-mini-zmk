@@ -242,6 +242,11 @@
             bindings = <&mo 9>;
             key-positions = <16 37>;
         };
+
+        debug_layer {
+            bindings = <&mo 10>;
+            key-positions = <5 4>;
+        };
     };
 
     keymap {

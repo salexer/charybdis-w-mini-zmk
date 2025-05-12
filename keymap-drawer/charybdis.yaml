@@ -425,8 +425,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
   - F9
   - F8
   - F7
@@ -477,3 +477,5 @@ combos:
   k: WINDOWS_LAYER
 - p: [16, 37]
   k: shift_number
+- p: [5, 4]
+  k: DEBUG
