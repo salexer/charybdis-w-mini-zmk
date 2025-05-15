@@ -47,25 +47,25 @@ layers:
   - '&ctrl_plus C'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - R CLK
+  - {t: ▽, type: trans}
   - '&msc SCRL_UP'
-  - '&as LEFT_BRACKET'
-  - '&as N7'
-  - '&as N8'
-  - '&as N9'
-  - '&as MINUS'
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - '-'
   - BACK SPACE
   - Alt+Ctl+ DELETE
   - '&ctrl_plus V'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - REPLACER_SYM
   - shift_number
   - '&msc SCRL_DOWN'
-  - '&as RIGHT_BRACKET'
-  - '&as N4'
-  - '&as N5'
-  - '&as NUMBER_6'
-  - '&as EQUAL'
+  - ']'
+  - '4'
+  - '5'
+  - '6'
+  - '='
   - PRINT SCREEN
   - {t: ▽, type: trans}
   - '&ctrl_plus X'
@@ -74,21 +74,21 @@ layers:
   - '&ctrl_plus PLUS'
   - {t: ▽, type: trans}
   - \
-  - '&as N1'
-  - '&as N2'
-  - '&as N3'
-  - '&as SLASH'
+  - '1'
+  - '2'
+  - '3'
+  - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&as N0'
+  - '0'
   ARROWS_MEDIA:
   - MUTE
   - {t: ▽, type: trans}
   - Ctl+ =
-  - MENU
+  - APP
   - Alt+ ENTER
   - {t: ▽, type: trans}
   - MENU
@@ -100,8 +100,8 @@ layers:
   - VOLUME UP
   - {t: ▽, type: trans}
   - Ctl+ -
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+ ,
+  - Sft+Ctl+ P
   - PLAY PAUSE
   - LEFT
   - DOWN ARROW
@@ -334,7 +334,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+Ctl+ F5
   - {t: ▽, type: trans}
   IDE_TAB_MANAGER:
   - {t: ▽, type: trans}
@@ -383,8 +383,8 @@ layers:
   - '&ctrl_plus C'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - R CLK
-  - '&msc SCRL_UP'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Sft+ [
   - Sft+ 7
   - Sft+ 8
@@ -396,7 +396,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - '&msc SCRL_DOWN'
+  - {t: ▽, type: trans}
   - Sft+ ]
   - Sft+ 4
   - Sft+ 5
@@ -431,8 +431,8 @@ layers:
   - F8
   - F7
   - Sft+ F8
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+ F5
+  - Sft+Ctl+ F5
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -441,7 +441,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+ F5
   - Sft+Ctl+ F8
-  - {t: ▽, type: trans}
+  - F5
   - Ctl+Sft+ F10
   - Ctl+ F8
   - {t: ▽, type: trans}
@@ -459,6 +459,48 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  REPLACER_SYM:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LANGUAGE 4
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LANGUAGE 1
+  - LANGUAGE 2
+  - LANGUAGE 3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
