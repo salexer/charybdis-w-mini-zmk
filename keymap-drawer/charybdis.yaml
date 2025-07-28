@@ -41,7 +41,7 @@ layers:
   - NUMBER_MOUSE
   - SPACE
   - {t: RETURN, h: ARROWS_MEDIA}
-  - RIGHT ALT
+  - LEFT ALT
   NUMBER_MOUSE:
   - {t: ▽, type: trans}
   - '&ctrl_plus C'
