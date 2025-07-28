@@ -41,12 +41,12 @@ layers:
   - NUMBER_MOUSE
   - SPACE
   - {t: RETURN, h: ARROWS_MEDIA}
-  - RIGHT ALT
+  - LEFT ALT
   NUMBER_MOUSE:
   - {t: ▽, type: trans}
   - '&ctrl_plus C'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Mid CLK
   - {t: ▽, type: trans}
   - '&msc SCRL_UP'
   - '['
@@ -485,7 +485,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LANGUAGE 4
+  - '&as LANGUAGE_4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -495,9 +495,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LANGUAGE 1
-  - LANGUAGE 2
-  - LANGUAGE 3
+  - '&as INTERNATIONAL_1'
+  - '&as INTERNATIONAL_2'
+  - '&as LANGUAGE_3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
