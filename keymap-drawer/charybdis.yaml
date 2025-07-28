@@ -91,7 +91,7 @@ layers:
   - APP
   - Alt+ ENTER
   - {t: ▽, type: trans}
-  - MENU
+  - Sft+ CMENU
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ENTER
