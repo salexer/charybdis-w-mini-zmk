@@ -20,7 +20,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 1 2 3 4 6 7>;
+        layers = <0 1 2 3 5 6 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -35,7 +35,7 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <6>;
+        layers = <5>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -307,10 +307,10 @@
 
         NUMBER_MOUSE {
             bindings = <
-&trans              &ctrl_plus C  &trans        &mkp MCLK         &trans           &msc SCRL_UP      &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9        &kp MINUS  &kp BACKSPACE
-&kp LA(LC(DELETE))  &ctrl_plus V  &trans        &mo 12            &mo 10           &msc SCRL_DOWN    &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp NUMBER_6  &kp EQUAL  &kp PRINTSCREEN
-&trans              &ctrl_plus X  &ctrl_plus A  &ctrl_plus MINUS  &ctrl_plus PLUS  &trans            &kp BACKSLASH      &kp N1  &kp N2  &kp N3        &kp SLASH  &trans
-                                                &trans            &trans           &trans            &trans             &kp N0
+&trans              &kp LC(C)  &trans     &mkp MCLK      &trans        &msc SCRL_UP      &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9        &kp MINUS  &kp BACKSPACE
+&kp LA(LC(DELETE))  &kp LC(V)  &trans     &mo 12         &mo 10        &msc SCRL_DOWN    &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp NUMBER_6  &kp EQUAL  &kp PRINTSCREEN
+&trans              &kp LC(X)  &kp LC(A)  &kp LC(MINUS)  &kp LC(PLUS)  &trans            &kp BACKSLASH      &kp N1  &kp N2  &kp N3        &kp SLASH  &trans
+                                          &trans         &trans        &trans            &trans             &kp N0
             >;
         };
 
