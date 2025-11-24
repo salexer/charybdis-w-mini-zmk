@@ -16,7 +16,6 @@ manifest:
       remote: badjeff
       revision: main
     - name: zmk-input-behavior-listener
-      remote: badjeff
-      revision: main
+      path: ../modules/zmk-input-behavior-listener
   self:
     path: config
