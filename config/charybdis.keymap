@@ -298,10 +298,10 @@
 
         BASE_MAC {
             bindings = <
-&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &F13_mac_apps
-&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LS(LCMD)  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &F13_mac_apps
+&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &kp LCMD  &trans  &trans    &trans  &trans
             >;
         };
 
