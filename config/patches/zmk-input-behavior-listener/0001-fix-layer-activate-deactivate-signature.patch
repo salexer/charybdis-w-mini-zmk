@@ -1,0 +1,35 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Local Patch <local@patch>
+Date: Mon, 1 Jan 2024 00:00:00 +0000
+Subject: [PATCH] Fix zmk_keymap_layer_deactivate and zmk_keymap_layer_activate
+ signature
+
+Add NULL parameter to match new ZMK API signature
+
+---
+ src/input_behavior_tog_layer.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/input_behavior_tog_layer.c b/src/input_behavior_tog_layer.c
+index 0000000..1111111 100644
+--- a/src/input_behavior_tog_layer.c
++++ b/src/input_behavior_tog_layer.c
+@@ -38,7 +38,7 @@ static void toggle_layer_deactivate_cb(struct k_work *work) {
+       return;
+     }
+     LOG_DBG("deactivate layer %d", data->toggle_layer);
+-    zmk_keymap_layer_deactivate(data->toggle_layer);
++    zmk_keymap_layer_deactivate(data->toggle_layer, NULL);
+ }
+ 
+ static void toggle_layer_activate_cb(struct k_work *work) {
+@@ -47,7 +47,7 @@ static void toggle_layer_activate_cb(struct k_work *work) {
+                                                         struct behavior_tog_layer_data,
+                                                         toggle_layer_activate_work);
+     LOG_DBG("activate layer %d", data->toggle_layer);
+-    zmk_keymap_layer_activate(data->toggle_layer);
++    zmk_keymap_layer_activate(data->toggle_layer, NULL);
+ }
+ 
+ static int to_keymap_binding_pressed(struct zmk_behavior_binding *binding,
+
