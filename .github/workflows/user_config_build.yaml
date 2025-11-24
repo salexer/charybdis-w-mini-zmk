@@ -158,6 +158,21 @@ jobs:
           tree "${{ env.base_dir }}"
           tree "${GITHUB_WORKSPACE}/boards/shields"
 
+      - name: Copy local module to config directory
+        run: |
+          if [ "${{ env.base_dir }}" != "${GITHUB_WORKSPACE}" ]; then
+            base_config_path="${{ env.base_dir }}/${{ inputs.config_path }}"
+            mkdir -p "$base_config_path/modules"
+            cp -R "${{ github.workspace }}/modules/zmk-input-behavior-listener" \
+              "$base_config_path/modules/"
+            echo "Local module copied to config directory"
+          else
+            mkdir -p "${{ inputs.config_path }}/modules"
+            cp -R "${{ github.workspace }}/modules/zmk-input-behavior-listener" \
+              "${{ inputs.config_path }}/modules/"
+            echo "Local module copied to config directory"
+          fi
+
       - name: Cache west modules
         uses: actions/cache@v4
         continue-on-error: true
