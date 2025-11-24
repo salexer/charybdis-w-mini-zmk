@@ -48,7 +48,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <4>;
+        layers = <5>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -207,14 +207,23 @@
             compatible = "zmk,behavior-tap-dance";
             label = "F13_WINGUI";
             #binding-cells = <0>;
-            bindings = <&kp F13>, <&kp RIGHT_GUI>;
+            bindings = <&f13_holdtap RCLK F13>, <&kp RIGHT_GUI>;
         };
 
         F13_mac_apps: F13_mac_apps {
             compatible = "zmk,behavior-tap-dance";
             label = "F13_MAC_APPS";
             #binding-cells = <0>;
-            bindings = <&kp F13>, <&kp LG(LA(L))>;
+            bindings = <&f13_holdtap RCLK F13>, <&kp LG(LA(L))>;
+        };
+
+        f13_holdtap: f13_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "F13_HOLDTAP";
+            bindings = <&mkp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
         };
     };
 
