@@ -301,7 +301,7 @@
 &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &F13_mac_apps
 &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LCMD  &trans  &trans    &trans  &trans
+                        &kp LCMD  &mo 3   &trans    &trans  &trans
             >;
         };
 
@@ -379,10 +379,10 @@
 
         MACOS_LAYER {
             bindings = <
-&none  &none  &none  &none  &kp LG(Q)  &kp LA(LC(ENTER))    &none             &none  &none  &none              &none  &none
-&none  &none  &none  &none  &none      &none                &kp LS(LC(LEFT))  &none  &none  &kp LS(LC(RIGHT))  &none  &none
-&none  &none  &none  &none  &none      &none                &none             &none  &none  &none              &none  &none
-                     &none  &none      &none                &none             &none
+&trans  &trans  &trans  &trans  &kp LG(Q)  &kp LA(LC(ENTER))    &trans            &kp LA(TAB)  &trans  &trans             &kp LS(LG(LEFT))  &kp LS(LG(RIGHT))
+&trans  &trans  &trans  &trans  &trans     &trans               &kp LS(LC(LEFT))  &trans       &trans  &kp LS(LC(RIGHT))  &trans            &trans
+&trans  &trans  &trans  &trans  &trans     &trans               &trans            &trans       &trans  &trans             &trans            &trans
+                        &trans  &trans     &trans               &trans            &trans
             >;
         };
 
