@@ -20,7 +20,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 1 2 3 4 6 7>;
+        layers = <0 1 2 3 4 5 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -35,7 +35,7 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <6>;
+        layers = <7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -53,7 +53,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 14>;
+        bindings = <&ib_wheel_scaler 1 28>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
@@ -231,7 +231,7 @@
         compatible = "zmk,combos";
 
         LAYER_SYSTEM {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <38 39>;
         };
 
@@ -241,44 +241,44 @@
         };
 
         SCROLL_TOGGLE {
-            bindings = <&tog 5>;
+            bindings = <&tog 6>;
             key-positions = <20 21>;
             timeout-ms = <200>;
         };
 
         ide_windows {
-            bindings = <&mo 7>;
+            bindings = <&mo 8>;
             key-positions = <15 16>;
         };
 
         snipe_mod {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <32 33>;
         };
 
         windows_layer {
-            bindings = <&mo 8>;
+            bindings = <&mo 9>;
             key-positions = <14 15>;
             layers = <0>;
         };
 
         shift_number {
-            bindings = <&mo 10>;
+            bindings = <&mo 12>;
             key-positions = <16 37>;
         };
 
         debug_layer {
-            bindings = <&mo 11>;
+            bindings = <&mo 13>;
             key-positions = <5 4>;
         };
 
         ai_cursor {
-            bindings = <&mo 13>;
+            bindings = <&mo 16>;
             key-positions = <2 4>;
         };
 
         macos_layers {
-            bindings = <&mo 8>;
+            bindings = <&mo 10>;
             key-positions = <14 15>;
             layers = <1>;
         };
@@ -292,7 +292,7 @@
 &mt GRAVE ESCAPE  &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y         &kp U         &kp I      &kp O    &kp P             &kp BSPC
 &kp TAB           &kp A  &kp S  &kp D             &kp F  &kp G        &kp H         &kp J         &kp K      &kp L    &as SEMICOLON     &F13_wingui
 &kp LSHFT         &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N         &kp M         &as COMMA  &as DOT  &as SINGLE_QUOTE  &kp RSHFT
-                                &kp LEFT_CONTROL  &mo 2  &kp SPACE    &lt 3 RETURN  &kp LEFT_ALT
+                                &kp LEFT_CONTROL  &mo 2  &kp SPACE    &lt 4 RETURN  &kp LEFT_ALT
             >;
         };
 
@@ -308,9 +308,18 @@
         NUMBER_MOUSE {
             bindings = <
 &trans              &kp LC(C)  &trans     &mkp MCLK      &trans        &msc SCRL_UP      &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9        &kp MINUS  &kp BACKSPACE
-&kp LA(LC(DELETE))  &kp LC(V)  &trans     &mo 12         &mo 10        &msc SCRL_DOWN    &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp NUMBER_6  &kp EQUAL  &kp PRINTSCREEN
+&kp LA(LC(DELETE))  &kp LC(V)  &trans     &mo 14         &mo 12        &msc SCRL_DOWN    &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp NUMBER_6  &kp EQUAL  &kp PRINTSCREEN
 &trans              &kp LC(X)  &kp LC(A)  &kp LC(MINUS)  &kp LC(PLUS)  &trans            &kp BACKSLASH      &kp N1  &kp N2  &kp N3        &kp SLASH  &trans
                                           &trans         &trans        &trans            &trans             &kp N0
+            >;
+        };
+
+        NUMBER_MACOS {
+            bindings = <
+&trans  &kp LG(C)  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(V)  &trans     &mo 15  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(X)  &kp LG(A)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans    &trans  &trans
             >;
         };
 
@@ -368,6 +377,15 @@
             >;
         };
 
+        MACOS_LAYER {
+            bindings = <
+&none  &none  &none  &none  &kp LG(Q)  &kp LA(LC(ENTER))    &none             &none  &none  &none              &none  &none
+&none  &none  &none  &none  &none      &none                &kp LS(LC(LEFT))  &none  &none  &kp LS(LC(RIGHT))  &none  &none
+&none  &none  &none  &none  &none      &none                &none             &none  &none  &none              &none  &none
+                     &none  &none      &none                &none             &none
+            >;
+        };
+
         IDE_TAB_MANAGER {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -400,6 +418,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans               &trans               &trans          &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans               &trans               &as LANGUAGE_4  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &as INTERNATIONAL_1  &as INTERNATIONAL_2  &as LANGUAGE_3  &trans
+                        &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        REPLACE_SYM_MAC {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &as LC(INT1)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &as INT1  &as LA(INT1)  &as LG(INT1)  &trans
                         &trans  &trans  &trans    &trans  &trans
             >;
         };
