@@ -20,7 +20,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 1 2 3 4 5 7>;
+        layers = <0 1 2 3 4 5 6 8 9 10 11 12 13 14 15 16 17>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -35,12 +35,12 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <7>;
+        layers = <8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <8>;
+        scale-divisor = <32>;
     };
 
     /* input config for mouse scroll mode */
@@ -48,7 +48,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <5>;
+        layers = <7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -225,13 +225,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <190>;
         };
+
+        shift_ctrl: shift_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CTRL";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LCTRL>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
         LAYER_SYSTEM {
-            bindings = <&mo 5>;
+            bindings = <&mo 6>;
             key-positions = <38 39>;
         };
 
@@ -241,51 +248,51 @@
         };
 
         SCROLL_TOGGLE {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <20 21>;
             timeout-ms = <200>;
         };
 
         ide_windows {
-            bindings = <&mo 8>;
+            bindings = <&mo 9>;
             key-positions = <15 16>;
         };
 
         snipe_mod {
-            bindings = <&tog 7>;
+            bindings = <&tog 8>;
             key-positions = <32 33>;
         };
 
         windows_layer {
-            bindings = <&mo 9>;
+            bindings = <&mo 10>;
             key-positions = <14 15>;
             layers = <0>;
         };
 
         shift_number {
-            bindings = <&mo 12>;
+            bindings = <&mo 13>;
             key-positions = <16 37>;
         };
 
         debug_layer {
-            bindings = <&mo 13>;
+            bindings = <&mo 14>;
             key-positions = <5 4>;
         };
 
         ai_cursor {
-            bindings = <&mo 16>;
+            bindings = <&mo 17>;
             key-positions = <2 4>;
         };
 
         macos_layers {
-            bindings = <&mo 10>;
+            bindings = <&mo 11>;
             key-positions = <14 15>;
             layers = <1>;
         };
 
         homerow {
             bindings = <&kp LG(LC(H))>;
-            key-positions = <19 20>;
+            key-positions = <8 19>;
             layers = <1>;
         };
     };
@@ -298,23 +305,23 @@
 &mt GRAVE ESCAPE  &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y         &kp U         &kp I      &kp O    &kp P             &kp BSPC
 &kp TAB           &kp A  &kp S  &kp D             &kp F  &kp G        &kp H         &kp J         &kp K      &kp L    &as SEMICOLON     &F13_wingui
 &kp LSHFT         &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N         &kp M         &as COMMA  &as DOT  &as SINGLE_QUOTE  &kp RSHFT
-                                &kp LEFT_CONTROL  &mo 2  &kp SPACE    &lt 4 RETURN  &kp LEFT_ALT
+                                &kp LEFT_CONTROL  &mo 2  &kp SPACE    &lt 5 RETURN  &kp LEFT_ALT
             >;
         };
 
         BASE_MAC {
             bindings = <
-&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &F13_mac_apps
-&trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LCMD  &mo 3   &trans    &trans  &trans
+&trans       &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &F13_mac_apps
+&shift_ctrl  &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                             &kp LCMD  &mo 3   &trans    &trans  &trans
             >;
         };
 
         NUMBER_MOUSE {
             bindings = <
 &trans              &kp LC(C)  &trans     &mkp MCLK      &trans        &msc SCRL_UP      &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9        &kp MINUS  &kp BACKSPACE
-&kp LA(LC(DELETE))  &kp LC(V)  &trans     &mo 14         &mo 12        &msc SCRL_DOWN    &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp NUMBER_6  &kp EQUAL  &kp PRINTSCREEN
+&kp LA(LC(DELETE))  &kp LC(V)  &trans     &mo 15         &mo 13        &msc SCRL_DOWN    &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp NUMBER_6  &kp EQUAL  &kp PRINTSCREEN
 &trans              &kp LC(X)  &kp LC(A)  &kp LC(MINUS)  &kp LC(PLUS)  &trans            &kp BACKSLASH      &kp N1  &kp N2  &kp N3        &kp SLASH  &trans
                                           &trans         &trans        &trans            &trans             &kp N0
             >;
@@ -322,10 +329,19 @@
 
         NUMBER_MACOS {
             bindings = <
-&trans  &kp LG(C)  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(V)  &trans     &mo 15  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(X)  &kp LG(A)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans
+&trans              &kp LG(C)  &trans     &mkp MCLK      &trans        &msc SCRL_UP      &kp LEFT_BRACKET   &kp N7  &kp N8  &kp N9        &kp MINUS  &kp BACKSPACE
+&kp LA(LC(DELETE))  &kp LG(V)  &trans     &mo 16         &mo 13        &msc SCRL_DOWN    &kp RIGHT_BRACKET  &kp N4  &kp N5  &kp NUMBER_6  &kp EQUAL  &kp PRINTSCREEN
+&trans              &kp LG(X)  &kp LG(A)  &kp LC(MINUS)  &kp LC(PLUS)  &trans            &kp BACKSLASH      &kp N1  &kp N2  &kp N3        &kp SLASH  &trans
+                                          &trans         &trans        &trans            &trans             &kp N0
+            >;
+        };
+
+        NUMBER_MACOS_D {
+            bindings = <
+&trans  &kp LG(C)  &trans     &trans  &trans  &msc SCRL_UP      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(V)  &trans     &mo 16  &trans  &msc SCRL_DOWN    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(X)  &kp LG(A)  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans            &trans  &trans
             >;
         };
 
@@ -385,10 +401,10 @@
 
         MACOS_LAYER {
             bindings = <
-&trans  &trans  &trans  &trans  &kp LG(Q)  &kp LA(LC(ENTER))    &trans            &kp LA(TAB)  &trans  &trans             &kp LS(LG(LEFT))  &kp LS(LG(RIGHT))
-&trans  &trans  &trans  &trans  &trans     &trans               &kp LS(LC(LEFT))  &trans       &trans  &kp LS(LC(RIGHT))  &trans            &trans
-&trans  &trans  &trans  &trans  &trans     &trans               &trans            &trans       &trans  &trans             &trans            &trans
-                        &trans  &trans     &trans               &trans            &trans
+&trans  &trans  &trans  &trans  &kp LG(Q)      &kp LC(LA(ENTER))    &kp LS(LG(LEFT))  &kp LA(TAB)       &kp LG(TAB)        &kp LS(LG(RIGHT))  &kp LS(LG(LEFT))   &kp LS(LG(RIGHT))
+&trans  &trans  &trans  &trans  &kp LG(LC(T))  &kp LS(LC(F5))       &kp LS(LC(LEFT))  &kp LG(DOWN)      &kp LG(UP)         &kp LS(LC(RIGHT))  &kp LS(LG(Q))      &kp LS(LA(LC(V)))
+&trans  &trans  &trans  &trans  &trans         &trans               &kp LC(LG(LEFT))  &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))  &kp LC(LG(RIGHT))  &kp LS(LC(LG(F)))  &kp LA(LS(LC(B)))
+                        &trans  &trans         &trans               &kp LS(LC(F5))    &trans
             >;
         };
 
